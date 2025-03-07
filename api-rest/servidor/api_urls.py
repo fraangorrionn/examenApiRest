@@ -20,6 +20,8 @@ urlpatterns = [
     path('comentarios/editar/<int:comentario_id>/', comentario_editar, name='comentario_editar'),
     path('comentarios/actualizar-texto/<int:comentario_id>/', comentario_actualizar_texto, name='comentario_actualizar_texto'),
     path('comentarios/eliminar/<int:comentario_id>/', comentario_eliminar, name='comentario_eliminar'),
-
+    
+    
+    path('registration/registro', registrar_usuario, name='registrar_usuario'),
 
 ]

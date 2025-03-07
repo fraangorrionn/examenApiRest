@@ -22,7 +22,6 @@
                 <th>Nombre</th>
                 <th>Descripción</th>
                 <th>Categoría</th>
-                <th>Descargas</th>
                 <th>Desarrollador</th>
                 <th>Fecha de Creación</th>
                 <th>Acciones</th>
@@ -34,7 +33,6 @@
                 <td>{{ app.nombre }}</td>
                 <td>{{ app.descripcion|default:"-" }}</td>
                 <td>{{ app.categoria|default:"-" }}</td>
-                <td>{{ app.descargas }}</td>
                 <td>{{ app.desarrollador.username }}</td>
                 <td>{{ app.fecha_creacion|date:"d/m/Y" }}</td>
                 <td>

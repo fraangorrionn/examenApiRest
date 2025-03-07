@@ -5,7 +5,7 @@
     <div class="col-md-6">
         <div class="card shadow p-4">
             <h2 class="text-center">Registro de Usuario</h2>
-            <form action="{% url 'registro' %}" method="post"> 
+            <form action="{% url 'registrar_usuario' %}" method="post"> 
                 {% load django_bootstrap5 %}
                 {% csrf_token %} 
                 {% bootstrap_form formulario %}         

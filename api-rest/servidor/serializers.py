@@ -40,7 +40,7 @@ class MobileAppSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = MobileApp
-        fields = ['id', 'nombre', 'descripcion', 'fecha_creacion', 'desarrollador', 'descargas', 'categoria']
+        fields = ['id', 'nombre', 'descripcion', 'fecha_creacion', 'desarrollador']
 
     def get_fecha_creacion(self, obj):
         return obj.fecha_creacion.strftime("%d-%m-%Y") if obj.fecha_creacion else None  # Convertimos manualmente la fecha
@@ -53,7 +53,7 @@ class ComentarioSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Comentario
-        fields = ['id', 'texto', 'app', 'usuario', 'fecha_creacion', 'calificacion', 'editado', 'respuesta']
+        fields = ['id', 'texto', 'app', 'usuario', 'fecha_creacion', 'calificacion']
 
     def get_fecha_creacion(self, obj):
         return obj.fecha_creacion.strftime("%d-%m-%Y") if obj.fecha_creacion else None  # Convertimos manualmente
@@ -113,7 +113,6 @@ class ComentarioCreateSerializer(serializers.ModelSerializer):
         instance.texto = validated_data.get('texto', instance.texto)
         instance.calificacion = validated_data.get('calificacion', instance.calificacion)
         instance.respuesta = validated_data.get('respuesta', instance.respuesta)
-        instance.editado = True  # Marcamos el comentario como editado
         instance.save()
         return instance
     

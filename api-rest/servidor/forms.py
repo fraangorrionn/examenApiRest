@@ -92,11 +92,11 @@ class UsuarioBusquedaForm(forms.Form):
 class MobileAppForm(forms.ModelForm):
     class Meta:
         model = MobileApp
-        fields = ['nombre', 'descripcion', 'categoria']
+        fields = ['nombre', 'descripcion', 'fecha_creacion']
         widgets = {
             'nombre': forms.TextInput(attrs={'class': 'form-control'}),
             'descripcion': forms.Textarea(attrs={'class': 'form-control'}),
-            'categoria': forms.TextInput(attrs={'class': 'form-control'}),
+            'fecha_creacion': forms.SelectDateWidget(attrs={'class': 'form-control'}),
         }
 
     def __init__(self, *args, **kwargs):
@@ -109,7 +109,7 @@ class MobileAppForm(forms.ModelForm):
             creador = CreadorDeAplicaciones.objects.filter(usuario=self.usuario).first()
             if not creador:
                 self.add_error(None, "Solo los Creadores de Aplicaciones pueden registrar una app.")
-                return None  # No se guarda
+                return None 
             app.desarrollador = creador
         if commit:
             app.save()
@@ -124,11 +124,7 @@ class MobileAppBusquedaForm(forms.Form):
         label="Buscar Aplicación",
         widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Nombre o Descripción'})
     )
-    categoria = forms.CharField(
-        required=False,
-        label="Categoría",
-        widget=forms.TextInput(attrs={'class': 'form-control'})
-    )
+    
     desarrollador = forms.CharField(
         required=False,
         label="Desarrollador",
@@ -144,35 +140,22 @@ class MobileAppBusquedaForm(forms.Form):
         label="Creada Hasta",
         widget=forms.DateInput(attrs={'type': 'date', 'class': 'form-control'})
     )
-    descargas_minimas = forms.IntegerField(
-        required=False,
-        label="Mínimo de Descargas",
-        widget=forms.NumberInput(attrs={'class': 'form-control', 'min': 0})
-    )
-    descargas_maximas = forms.IntegerField(
-        required=False,
-        label="Máximo de Descargas",
-        widget=forms.NumberInput(attrs={'class': 'form-control', 'min': 0})
-    )
+
 
     def clean(self):
         cleaned_data = super().clean()
         query = cleaned_data.get('query')
-        categoria = cleaned_data.get('categoria')
         desarrollador = cleaned_data.get('desarrollador')
         fecha_creacion_desde = cleaned_data.get('fecha_creacion_desde')
         fecha_creacion_hasta = cleaned_data.get('fecha_creacion_hasta')
-        descargas_minimas = cleaned_data.get('descargas_minimas')
-        descargas_maximas = cleaned_data.get('descargas_maximas')
 
-        if not any([query, categoria, desarrollador, fecha_creacion_desde, fecha_creacion_hasta, descargas_minimas, descargas_maximas]):
+
+        if not any([query, desarrollador, fecha_creacion_desde, fecha_creacion_hasta]):
             self.add_error(None, "Debes ingresar al menos un criterio de búsqueda.")
 
         if fecha_creacion_desde and fecha_creacion_hasta and fecha_creacion_desde > fecha_creacion_hasta:
             self.add_error('fecha_creacion_hasta', "La fecha de creación hasta no puede ser menor que la fecha desde.")
 
-        if descargas_minimas and descargas_maximas and descargas_minimas > descargas_maximas:
-            self.add_error('descargas_maximas', "El número máximo de descargas no puede ser menor que el mínimo.")
 
         return cleaned_data
 
@@ -237,11 +220,6 @@ class ComentarioBusquedaForm(forms.Form):
         required=False,
         label="Calificación Máxima",
         widget=forms.NumberInput(attrs={'class': 'form-control', 'min': 1, 'max': 5})
-    )
-    editado = forms.BooleanField(
-        required=False,
-        label="Editado",
-        widget=forms.CheckboxInput(attrs={'class': 'form-check-input'})
     )
 
     def clean(self):

@@ -4,7 +4,10 @@ from rest_framework import status
 from .models import *
 from .serializers import *
 from .forms import *
-
+from django.contrib.auth import login
+from django.contrib.auth.models import Group
+from datetime import datetime
+from django.shortcuts import render, redirect
 
 # VISTA GET PARA OBTENER TODOS LOS USUARIOS
 @api_view(['GET'])
@@ -97,11 +100,10 @@ def buscar_apps(request):
             desarrollador = formulario.cleaned_data.get('desarrollador')
             fecha_creacion_desde = formulario.cleaned_data.get('fecha_creacion_desde')
             fecha_creacion_hasta = formulario.cleaned_data.get('fecha_creacion_hasta')
-            descargas_minimas = formulario.cleaned_data.get('descargas_minimas')
-            descargas_maximas = formulario.cleaned_data.get('descargas_maximas')
+
 
             # Si todos los campos están vacíos, devolver un error
-            if not any([query, categoria, desarrollador, fecha_creacion_desde, fecha_creacion_hasta, descargas_minimas, descargas_maximas]):
+            if not any([query, categoria, desarrollador, fecha_creacion_desde, fecha_creacion_hasta]):
                 return Response({"error": "Debe proporcionar al menos un parámetro de búsqueda."}, status=status.HTTP_400_BAD_REQUEST)
 
             # Construir la QuerySet inicial
@@ -125,13 +127,6 @@ def buscar_apps(request):
 
             if fecha_creacion_hasta:
                 QSapps = QSapps.filter(fecha_creacion__date__lte=fecha_creacion_hasta)
-
-            # Filtro por número de descargas
-            if descargas_minimas:
-                QSapps = QSapps.filter(descargas__gte=descargas_minimas)
-
-            if descargas_maximas:
-                QSapps = QSapps.filter(descargas__lte=descargas_maximas)
 
             # Serializar los resultados
             serializer = MobileAppSerializer(QSapps, many=True)
@@ -226,7 +221,7 @@ def crear_comentario(request):
     else:
         return Response(comentario_serializer.errors, status=status.HTTP_400_BAD_REQUEST)
     
-@api_view(['GET', 'PUT'])
+@api_view(['PUT'])
 def comentario_editar(request, comentario_id):
     print(f"Solicitud recibida en comentario_editar con ID: {comentario_id}, Método: {request.method}")
 
@@ -283,3 +278,27 @@ def comentario_eliminar(request, comentario_id):
         return Response("Comentario ELIMINADO", status=status.HTTP_200_OK)
     except Exception as error:
         return Response(repr(error), status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+    
+def registrar_usuario(request):
+    if request.method == 'POST':
+        formulario = RegistroUsuarioForm(request.POST)
+        if formulario.is_valid():
+            user = formulario.save()
+            rol = int(formulario.cleaned_data.get('rol'))
+
+            if rol == Usuario.CLIENTE:
+                grupo, _ = Group.objects.get_or_create(name='ClientesApp')  # Asegurar que el grupo existe
+                grupo.user_set.add(user)
+                ClienteAPP.objects.create(usuario=user)  # Se crea automáticamente
+
+            elif rol == Usuario.CREATOR:
+                grupo, _ = Group.objects.get_or_create(name='CreadorDeAplicaciones') 
+                grupo.user_set.add(user)
+                CreadorDeAplicaciones.objects.create(usuario=user)  
+
+            login(request, user)
+            return redirect('index')
+    else:
+        formulario = RegistroUsuarioForm()
+
+    return render(request, 'registration/signup.html', {'formulario': formulario})

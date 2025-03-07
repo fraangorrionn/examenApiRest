@@ -147,25 +147,18 @@ def buscar_apps(request):
         desarrollador = form.cleaned_data.get('desarrollador')
         fecha_creacion_desde = form.cleaned_data.get('fecha_creacion_desde')
         fecha_creacion_hasta = form.cleaned_data.get('fecha_creacion_hasta')
-        descargas_minimas = form.cleaned_data.get('descargas_minimas')
-        descargas_maximas = form.cleaned_data.get('descargas_maximas')
 
         filtros = Q()
 
         if query:
             filtros |= Q(nombre__icontains=query) | Q(descripcion__icontains=query)
-        if categoria:
-            filtros &= Q(categoria__icontains=categoria)
         if desarrollador:
             filtros &= Q(desarrollador__username__icontains=desarrollador)
         if fecha_creacion_desde:
             filtros &= Q(fecha_creacion__gte=fecha_creacion_desde)
         if fecha_creacion_hasta:
             filtros &= Q(fecha_creacion__lte=fecha_creacion_hasta)
-        if descargas_minimas:
-            filtros &= Q(descargas__gte=descargas_minimas)
-        if descargas_maximas:
-            filtros &= Q(descargas__lte=descargas_maximas)
+
 
         apps = apps.filter(filtros)
 
@@ -260,8 +253,7 @@ def buscar_comentarios(request):
             filtros &= Q(calificacion__gte=calificacion_minima)
         if calificacion_maxima:
             filtros &= Q(calificacion__lte=calificacion_maxima)
-        if editado:
-            filtros &= Q(editado=True)
+
 
         print("Filtros aplicados:", filtros)  # Ver los filtros que se están aplicando
 
@@ -309,27 +301,4 @@ def eliminar_comentario(request, comentario_id):
     return render(request, 'comentarios/eliminar_comentario.html', {'comentario': comentario})
 
 
-def registrar_usuario(request):
-    if request.method == 'POST':
-        formulario = RegistroUsuarioForm(request.POST)
-        if formulario.is_valid():
-            user = formulario.save()
-            rol = int(formulario.cleaned_data.get('rol'))
-
-            if rol == Usuario.CLIENTE:
-                grupo, _ = Group.objects.get_or_create(name='ClientesApp')  # Asegurar que el grupo existe
-                grupo.user_set.add(user)
-                ClienteAPP.objects.create(usuario=user)  # Se crea automáticamente
-
-            elif rol == Usuario.CREATOR:
-                grupo, _ = Group.objects.get_or_create(name='CreadorDeAplicaciones') 
-                grupo.user_set.add(user)
-                CreadorDeAplicaciones.objects.create(usuario=user)  
-
-            login(request, user)
-            return redirect('index')
-    else:
-        formulario = RegistroUsuarioForm()
-
-    return render(request, 'registration/signup.html', {'formulario': formulario})
 

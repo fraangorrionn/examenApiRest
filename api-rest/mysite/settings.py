@@ -57,13 +57,13 @@ REST_FRAMEWORK = {
 #        'rest_framework_simplejwt.authentication.JWTAuthentication',
     ),
 
-#    'DEFAULT_PERMISSION_CLASSES': (
-#        'rest_framework.permissions.IsAuthenticated',
-#    ),
-    
-    'DEFAULT_RENDERER_CLASSES': (  # Asegura que devuelve JSON
-        'rest_framework.renderers.JSONRenderer',
+    'DEFAULT_PERMISSION_CLASSES': (
+        'rest_framework.permissions.IsAuthenticated',
     ),
+    
+#    'DEFAULT_RENDERER_CLASSES': (  # Asegura que devuelve JSON
+#        'rest_framework.renderers.JSONRenderer',
+#    ),
 }
 
 

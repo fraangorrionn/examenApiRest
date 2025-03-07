@@ -44,11 +44,7 @@
                 {{ form.calificacion_maxima }}
                 {{ form.calificacion_maxima.errors }}
             </div>
-            <div class="col-md-3">
-                <label class="form-label">Editado</label>
-                {{ form.editado }}
-                {{ form.editado.errors }}
-            </div>
+
 
             <div class="col-md-12 text-center">
                 <button type="submit" class="btn btn-primary">Buscar</button>
@@ -68,7 +64,6 @@
                 <th>Usuario</th>
                 <th>Calificación</th>
                 <th>Fecha</th>
-                <th>Editado</th>
                 <th>Acciones</th>
             </tr>
         </thead>
@@ -80,7 +75,6 @@
                 <td>{{ comentario.usuario.username }}</td>
                 <td>{{ comentario.calificacion }}/5</td>
                 <td>{{ comentario.fecha_creacion|date:"d/m/Y" }}</td>
-                <td>{% if comentario.editado %}✔{% else %}✖{% endif %}</td>
                 <td>
                     {% if perms.servidor.change_comentario %}
                         <a href="{% url 'editar_comentario' comentario.id %}" class="btn btn-primary btn-sm">Editar</a>
