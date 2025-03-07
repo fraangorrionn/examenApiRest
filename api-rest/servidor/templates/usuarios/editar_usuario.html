@@ -1,0 +1,25 @@
+{% extends 'principal.html' %}
+
+{% block title %}Editar Usuario{% endblock %}
+
+{% block content %}
+{% if perms.auth.change_user %}  
+    <div class="container mt-5">
+        <h1 class="text-center">Editar Usuario</h1>
+        <form method="post" class="border p-4 shadow-sm bg-light rounded">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <div class="text-center mt-3">
+                <button type="submit" class="btn btn-success">Guardar Cambios</button>
+                <a href="{% url 'lista_usuarios' %}" class="btn btn-secondary">Cancelar</a>
+            </div>
+        </form>
+    </div>
+{% else %}
+    <div class="container mt-5 text-center">
+        <div class="alert alert-danger" role="alert">
+            <strong>Acceso Denegado:</strong> No tienes permisos para editar usuarios. Contacta al administrador.
+        </div>
+    </div>
+{% endif %}
+{% endblock %}

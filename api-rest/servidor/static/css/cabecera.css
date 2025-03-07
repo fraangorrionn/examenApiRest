@@ -1,0 +1,32 @@
+/* Cabecera sticky (no tapa el contenido) */
+header {
+    background-color: #004080;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* Ajuste para que el contenido no quede oculto bajo la cabecera */
+body {
+    padding-top: 70px;  /* Ajustar según la altura del header */
+}
+
+/* Contenedor de navegación */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+/* Asegurar que los botones estén alineados */
+.nav-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}

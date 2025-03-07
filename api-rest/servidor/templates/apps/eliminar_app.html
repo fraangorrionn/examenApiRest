@@ -1,0 +1,22 @@
+{% extends 'principal.html' %}
+
+{% block title %}Eliminar Aplicación{% endblock %}
+
+{% block content %}
+<div class="container mt-4 text-center">
+    <h2>¿Seguro que quieres eliminar "{{ app.nombre }}"?</h2>
+
+    {% if perms.servidor.delete_mobileapp %}
+        <form method="post">
+            {% csrf_token %}
+            <button type="submit" class="btn btn-danger">Sí, eliminar</button>
+            <a href="{% url 'lista_apps' %}" class="btn btn-secondary">Cancelar</a>
+        </form>
+    {% else %}
+        <div class="alert alert-danger" role="alert">
+            No tienes permisos para eliminar aplicaciones.
+        </div>
+        <a href="{% url 'lista_apps' %}" class="btn btn-primary">Volver</a>
+    {% endif %}
+</div>
+{% endblock %}

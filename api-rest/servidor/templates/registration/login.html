@@ -1,0 +1,12 @@
+{% extends 'principal.html' %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2 class="text-center">Iniciar Sesión</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary">Iniciar sesión</button>
+    </form>
+</div>
+{% endblock %}

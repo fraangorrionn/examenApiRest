@@ -1,0 +1,41 @@
+{% extends 'principal.html' %}
+
+{% block title %}Editar Aplicación{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2 class="text-center">Editar Aplicación</h2>
+
+    {% if perms.servidor.change_mobileapp %}
+        <form method="post" class="border p-4 shadow-sm bg-light rounded">
+            {% csrf_token %}
+            {{ form.non_field_errors }}
+
+            <div class="mb-3">
+                <label class="form-label">Nombre</label>
+                {{ form.nombre }}
+                {{ form.nombre.errors }}
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Descripción</label>
+                {{ form.descripcion }}
+                {{ form.descripcion.errors }}
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Categoría</label>
+                {{ form.categoria }}
+                {{ form.categoria.errors }}
+            </div>
+
+            <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+            <a href="{% url 'lista_apps' %}" class="btn btn-secondary">Cancelar</a>
+        </form>
+    {% else %}
+        <div class="alert alert-danger text-center" role="alert">
+            No tienes permisos para editar aplicaciones.
+        </div>
+    {% endif %}
+</div>
+{% endblock %}

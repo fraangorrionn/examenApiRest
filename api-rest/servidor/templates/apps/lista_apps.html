@@ -1,0 +1,58 @@
+{% extends 'principal.html' %}
+
+{% block title %}Lista de Aplicaciones{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h1 class="text-center">Aplicaciones Registradas</h1>
+
+    <div class="mb-3">
+        {% if perms.servidor.add_mobileapp %}
+            <a href="{% url 'crear_app' %}" class="btn btn-success">Crear Aplicación</a>
+        {% endif %}
+        {% if perms.servidor.view_mobileapp %}
+            <a href="{% url 'buscar_apps' %}" class="btn btn-primary">Buscar Aplicación</a>
+        {% endif %}
+    </div>
+
+    {% if apps %}
+    <table class="table table-striped table-bordered">
+        <thead class="table-dark">
+            <tr>
+                <th>Nombre</th>
+                <th>Descripción</th>
+                <th>Categoría</th>
+                <th>Descargas</th>
+                <th>Desarrollador</th>
+                <th>Fecha de Creación</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for app in apps %}
+            <tr>
+                <td>{{ app.nombre }}</td>
+                <td>{{ app.descripcion|default:"-" }}</td>
+                <td>{{ app.categoria|default:"-" }}</td>
+                <td>{{ app.descargas }}</td>
+                <td>{{ app.desarrollador.username }}</td>
+                <td>{{ app.fecha_creacion|date:"d/m/Y" }}</td>
+                <td>
+                    {% if perms.servidor.change_mobileapp %}
+                        <a href="{% url 'editar_app' app.id %}" class="btn btn-primary btn-sm">Editar</a>
+                    {% endif %}
+                    {% if perms.servidor.delete_mobileapp %}
+                        <a href="{% url 'eliminar_app' app.id %}" class="btn btn-danger btn-sm" onclick="return confirm('¿Eliminar aplicación?')">Eliminar</a>
+                    {% endif %}
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% else %}
+        <div class="alert alert-warning text-center">
+            No hay aplicaciones registradas.
+        </div>
+    {% endif %}
+</div>
+{% endblock %}

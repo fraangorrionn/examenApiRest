@@ -1,0 +1,2032 @@
+[
+{
+    "model": "admin.logentry",
+    "pk": 1,
+    "fields": {
+        "action_time": "2025-03-07T01:57:27.720",
+        "user": 11,
+        "content_type": 3,
+        "object_id": "1",
+        "object_repr": "ClientesApp",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 2,
+    "fields": {
+        "action_time": "2025-03-07T01:58:21.459",
+        "user": 11,
+        "content_type": 3,
+        "object_id": "2",
+        "object_repr": "CreadorDeAplicaciones",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 3,
+    "fields": {
+        "action_time": "2025-03-07T01:58:53.721",
+        "user": 11,
+        "content_type": 3,
+        "object_id": "3",
+        "object_repr": "Aministrador",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 4,
+    "fields": {
+        "action_time": "2025-03-07T02:13:52.235",
+        "user": 11,
+        "content_type": 3,
+        "object_id": "4",
+        "object_repr": "Clientes",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Permissions\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 5,
+    "fields": {
+        "action_time": "2025-03-07T02:14:19.497",
+        "user": 11,
+        "content_type": 3,
+        "object_id": "5",
+        "object_repr": "Creadores",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Permissions\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 6,
+    "fields": {
+        "action_time": "2025-03-07T02:26:38.371",
+        "user": 11,
+        "content_type": 3,
+        "object_id": "4",
+        "object_repr": "Clientes",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 7,
+    "fields": {
+        "action_time": "2025-03-07T02:26:42.946",
+        "user": 11,
+        "content_type": 3,
+        "object_id": "5",
+        "object_repr": "Creadores",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 8,
+    "fields": {
+        "action_time": "2025-03-07T02:39:01.642",
+        "user": 11,
+        "content_type": 3,
+        "object_id": "2",
+        "object_repr": "CreadorDeAplicaciones",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 1,
+    "fields": {
+        "name": "Can add log entry",
+        "content_type": 1,
+        "codename": "add_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 2,
+    "fields": {
+        "name": "Can change log entry",
+        "content_type": 1,
+        "codename": "change_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 3,
+    "fields": {
+        "name": "Can delete log entry",
+        "content_type": 1,
+        "codename": "delete_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 4,
+    "fields": {
+        "name": "Can view log entry",
+        "content_type": 1,
+        "codename": "view_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 5,
+    "fields": {
+        "name": "Can add permission",
+        "content_type": 2,
+        "codename": "add_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 6,
+    "fields": {
+        "name": "Can change permission",
+        "content_type": 2,
+        "codename": "change_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 7,
+    "fields": {
+        "name": "Can delete permission",
+        "content_type": 2,
+        "codename": "delete_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 8,
+    "fields": {
+        "name": "Can view permission",
+        "content_type": 2,
+        "codename": "view_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 9,
+    "fields": {
+        "name": "Can add group",
+        "content_type": 3,
+        "codename": "add_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 10,
+    "fields": {
+        "name": "Can change group",
+        "content_type": 3,
+        "codename": "change_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 11,
+    "fields": {
+        "name": "Can delete group",
+        "content_type": 3,
+        "codename": "delete_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 12,
+    "fields": {
+        "name": "Can view group",
+        "content_type": 3,
+        "codename": "view_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 13,
+    "fields": {
+        "name": "Can add content type",
+        "content_type": 4,
+        "codename": "add_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 14,
+    "fields": {
+        "name": "Can change content type",
+        "content_type": 4,
+        "codename": "change_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 15,
+    "fields": {
+        "name": "Can delete content type",
+        "content_type": 4,
+        "codename": "delete_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 16,
+    "fields": {
+        "name": "Can view content type",
+        "content_type": 4,
+        "codename": "view_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 17,
+    "fields": {
+        "name": "Can add session",
+        "content_type": 5,
+        "codename": "add_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 18,
+    "fields": {
+        "name": "Can change session",
+        "content_type": 5,
+        "codename": "change_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 19,
+    "fields": {
+        "name": "Can delete session",
+        "content_type": 5,
+        "codename": "delete_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 20,
+    "fields": {
+        "name": "Can view session",
+        "content_type": 5,
+        "codename": "view_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 21,
+    "fields": {
+        "name": "Can add user",
+        "content_type": 6,
+        "codename": "add_usuario"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 22,
+    "fields": {
+        "name": "Can change user",
+        "content_type": 6,
+        "codename": "change_usuario"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 23,
+    "fields": {
+        "name": "Can delete user",
+        "content_type": 6,
+        "codename": "delete_usuario"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 24,
+    "fields": {
+        "name": "Can view user",
+        "content_type": 6,
+        "codename": "view_usuario"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 25,
+    "fields": {
+        "name": "Can add cliente app",
+        "content_type": 7,
+        "codename": "add_clienteapp"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 26,
+    "fields": {
+        "name": "Can change cliente app",
+        "content_type": 7,
+        "codename": "change_clienteapp"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 27,
+    "fields": {
+        "name": "Can delete cliente app",
+        "content_type": 7,
+        "codename": "delete_clienteapp"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 28,
+    "fields": {
+        "name": "Can view cliente app",
+        "content_type": 7,
+        "codename": "view_clienteapp"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 29,
+    "fields": {
+        "name": "Can add creador de aplicaciones",
+        "content_type": 8,
+        "codename": "add_creadordeaplicaciones"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 30,
+    "fields": {
+        "name": "Can change creador de aplicaciones",
+        "content_type": 8,
+        "codename": "change_creadordeaplicaciones"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 31,
+    "fields": {
+        "name": "Can delete creador de aplicaciones",
+        "content_type": 8,
+        "codename": "delete_creadordeaplicaciones"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 32,
+    "fields": {
+        "name": "Can view creador de aplicaciones",
+        "content_type": 8,
+        "codename": "view_creadordeaplicaciones"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 33,
+    "fields": {
+        "name": "Can add mobile app",
+        "content_type": 9,
+        "codename": "add_mobileapp"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 34,
+    "fields": {
+        "name": "Can change mobile app",
+        "content_type": 9,
+        "codename": "change_mobileapp"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 35,
+    "fields": {
+        "name": "Can delete mobile app",
+        "content_type": 9,
+        "codename": "delete_mobileapp"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 36,
+    "fields": {
+        "name": "Can view mobile app",
+        "content_type": 9,
+        "codename": "view_mobileapp"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 37,
+    "fields": {
+        "name": "Can add comentario",
+        "content_type": 10,
+        "codename": "add_comentario"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 38,
+    "fields": {
+        "name": "Can change comentario",
+        "content_type": 10,
+        "codename": "change_comentario"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 39,
+    "fields": {
+        "name": "Can delete comentario",
+        "content_type": 10,
+        "codename": "delete_comentario"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 40,
+    "fields": {
+        "name": "Can view comentario",
+        "content_type": 10,
+        "codename": "view_comentario"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 41,
+    "fields": {
+        "name": "Can add application",
+        "content_type": 11,
+        "codename": "add_application"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 42,
+    "fields": {
+        "name": "Can change application",
+        "content_type": 11,
+        "codename": "change_application"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 43,
+    "fields": {
+        "name": "Can delete application",
+        "content_type": 11,
+        "codename": "delete_application"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 44,
+    "fields": {
+        "name": "Can view application",
+        "content_type": 11,
+        "codename": "view_application"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 45,
+    "fields": {
+        "name": "Can add access token",
+        "content_type": 12,
+        "codename": "add_accesstoken"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 46,
+    "fields": {
+        "name": "Can change access token",
+        "content_type": 12,
+        "codename": "change_accesstoken"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 47,
+    "fields": {
+        "name": "Can delete access token",
+        "content_type": 12,
+        "codename": "delete_accesstoken"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 48,
+    "fields": {
+        "name": "Can view access token",
+        "content_type": 12,
+        "codename": "view_accesstoken"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 49,
+    "fields": {
+        "name": "Can add grant",
+        "content_type": 13,
+        "codename": "add_grant"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 50,
+    "fields": {
+        "name": "Can change grant",
+        "content_type": 13,
+        "codename": "change_grant"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 51,
+    "fields": {
+        "name": "Can delete grant",
+        "content_type": 13,
+        "codename": "delete_grant"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 52,
+    "fields": {
+        "name": "Can view grant",
+        "content_type": 13,
+        "codename": "view_grant"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 53,
+    "fields": {
+        "name": "Can add refresh token",
+        "content_type": 14,
+        "codename": "add_refreshtoken"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 54,
+    "fields": {
+        "name": "Can change refresh token",
+        "content_type": 14,
+        "codename": "change_refreshtoken"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 55,
+    "fields": {
+        "name": "Can delete refresh token",
+        "content_type": 14,
+        "codename": "delete_refreshtoken"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 56,
+    "fields": {
+        "name": "Can view refresh token",
+        "content_type": 14,
+        "codename": "view_refreshtoken"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 57,
+    "fields": {
+        "name": "Can add id token",
+        "content_type": 15,
+        "codename": "add_idtoken"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 58,
+    "fields": {
+        "name": "Can change id token",
+        "content_type": 15,
+        "codename": "change_idtoken"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 59,
+    "fields": {
+        "name": "Can delete id token",
+        "content_type": 15,
+        "codename": "delete_idtoken"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 60,
+    "fields": {
+        "name": "Can view id token",
+        "content_type": 15,
+        "codename": "view_idtoken"
+    }
+},
+{
+    "model": "auth.group",
+    "pk": 1,
+    "fields": {
+        "name": "ClientesApp",
+        "permissions": [
+            37,
+            38,
+            39,
+            40,
+            36
+        ]
+    }
+},
+{
+    "model": "auth.group",
+    "pk": 2,
+    "fields": {
+        "name": "CreadorDeAplicaciones",
+        "permissions": [
+            37,
+            38,
+            39,
+            40,
+            33,
+            34,
+            35,
+            36,
+            24
+        ]
+    }
+},
+{
+    "model": "auth.group",
+    "pk": 3,
+    "fields": {
+        "name": "Aministrador",
+        "permissions": [
+            1,
+            2,
+            3,
+            4,
+            9,
+            10,
+            11,
+            12,
+            5,
+            6,
+            7,
+            8,
+            13,
+            14,
+            15,
+            16,
+            45,
+            46,
+            47,
+            48,
+            41,
+            42,
+            43,
+            44,
+            49,
+            50,
+            51,
+            52,
+            57,
+            58,
+            59,
+            60,
+            53,
+            54,
+            55,
+            56,
+            25,
+            26,
+            27,
+            28,
+            37,
+            38,
+            39,
+            40,
+            29,
+            30,
+            31,
+            32,
+            33,
+            34,
+            35,
+            36,
+            21,
+            22,
+            23,
+            24,
+            17,
+            18,
+            19,
+            20
+        ]
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 1,
+    "fields": {
+        "app_label": "admin",
+        "model": "logentry"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 2,
+    "fields": {
+        "app_label": "auth",
+        "model": "permission"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 3,
+    "fields": {
+        "app_label": "auth",
+        "model": "group"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 4,
+    "fields": {
+        "app_label": "contenttypes",
+        "model": "contenttype"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 5,
+    "fields": {
+        "app_label": "sessions",
+        "model": "session"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 6,
+    "fields": {
+        "app_label": "servidor",
+        "model": "usuario"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 7,
+    "fields": {
+        "app_label": "servidor",
+        "model": "clienteapp"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 8,
+    "fields": {
+        "app_label": "servidor",
+        "model": "creadordeaplicaciones"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 9,
+    "fields": {
+        "app_label": "servidor",
+        "model": "mobileapp"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 10,
+    "fields": {
+        "app_label": "servidor",
+        "model": "comentario"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 11,
+    "fields": {
+        "app_label": "oauth2_provider",
+        "model": "application"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 12,
+    "fields": {
+        "app_label": "oauth2_provider",
+        "model": "accesstoken"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 13,
+    "fields": {
+        "app_label": "oauth2_provider",
+        "model": "grant"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 14,
+    "fields": {
+        "app_label": "oauth2_provider",
+        "model": "refreshtoken"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 15,
+    "fields": {
+        "app_label": "oauth2_provider",
+        "model": "idtoken"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "a3onlvcy2e2mt0z9u8jzn7ulpurjw291",
+    "fields": {
+        "session_data": ".eJxVjMsOgjAQRf-la9PQB7S4dO83kJm5rUUNJBRWxn9XEha6veec-1IDbWsZtpqWYYQ6K2PU6XdkkkeadoI7TbdZyzyty8h6V_RBq77OSM_L4f4dFKrlW9sYEQQS28jM0qVefCseTgzgXPLwsLGxKcM3uaMM10IcOITMsSf1_gA1dzmO:1tqO5i:oy35sn-UQEwouMS-K9DwQAOemMPJ2yfG3lMZoRkfaqk",
+        "expire_date": "2025-03-21T04:09:38.665"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "bfoe2p144osrbs8mgaeoh7qhid0pwg2b",
+    "fields": {
+        "session_data": ".eJxVjjsOwyAQBa8SUccIs_zsMn3OgGAXAklkJH-qKHdPLLlx-2Y0eh-WE5bg61SxNjYyKaTuBHTCXoQapR4lcAuDAcOuzIdtLX5b0uwr_eW-P48x4CtNO6FnmB6NY5vWuUa-K_ygC783Su_b4Z4CJSxlP-EcWSR02sUY0aQBlUZFgD0RQFKkSDohUyYlsgmZQBMCRWtzdENg3x-mT0Ru:1tqOLH:2Hs9A-6D-1KK7G6JsyY_pR_5nKot86RaSTd1nzUN0KM",
+        "expire_date": "2025-03-21T04:25:43.436"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "efshtzopeyc051kr6bdfirk4zlhptany",
+    "fields": {
+        "session_data": ".eJxVjjsOwjAQBa-CXBPL33idkp4zRPaujQ0olvKpEHeHSGnSvhmN3oflhCWMdapYGxuYEsp2QnfCXYQaBAzKcekBvGJXNoZtLeO2pHms9JelPI8x4CtNO6FnmB6NY5vWuUa-K_ygC783Su_b4Z4CJSxlPwFADgnBQowR--TRWDSkURJpnQwZUiBUymRE7kMmbQk1RedyBB_Y9weqbkR0:1tqMCu:nZzgSU9F6TeEjxVFCdoK-yP1K252zUZ8jyKaut3eYEY",
+        "expire_date": "2025-03-21T02:08:56.826"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "jl0plnkalysdzykupo5x9b6adity29cs",
+    "fields": {
+        "session_data": ".eJxVjMsOgjAQRf-la9PQB7S4dO83kJm5rUUNJBRWxn9XEha6veec-1IDbWsZtpqWYYQ6K2PU6XdkkkeadoI7TbdZyzyty8h6V_RBq77OSM_L4f4dFKrlW9sYEQQS28jM0qVefCseTgzgXPLwsLGxKcM3uaMM10IcOITMsSf1_gA1dzmO:1tqSxD:-xmDDzW5Feprx6Ryl0E5UXUOTb4l8ndbIKCGiDRlKD4",
+        "expire_date": "2025-03-21T09:21:11.763"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "lz91dy6etjlikcy13v61iz90ckpshnxv",
+    "fields": {
+        "session_data": ".eJxVjssOwiAUBX_FsLaEZ4Eu3fsNBO4FQQ0kfayM_65Nuun2zGRyPiQnKMHXVqF2MhHBhB6YHJi5MDVJPglJR2OccuRKfNjW4rclzb7iX-b8PMYAr9R2gs_QHp1Cb-tcI90VetCF3jum9-1wT4ESlrKfsBYNIFhtY4wwJgdKg0IJHFHKpFChsEykjIrlMWSUGkFiNCZH6wL5_gCppERz:1tqOQz:nExnBDgGAEX5Pi3w7idiaGGPUlhJOGWYarWOUEwDmpc",
+        "expire_date": "2025-03-21T04:31:37.307"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "n9dhdw6y03mzrv5v23uozbpv0xkeadk1",
+    "fields": {
+        "session_data": ".eJxVjMsOgjAQRf-la9PQB7S4dO83kJm5rUUNJBRWxn9XEha6veec-1IDbWsZtpqWYYQ6K2PU6XdkkkeadoI7TbdZyzyty8h6V_RBq77OSM_L4f4dFKrlW9sYEQQS28jM0qVefCseTgzgXPLwsLGxKcM3uaMM10IcOITMsSf1_gA1dzmO:1tqN9C:9YmRB2lzI346MhW03FneJRQy2fO3NfLM8H4bxw_4BG0",
+        "expire_date": "2025-03-21T03:09:10.395"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "qm62o0nkq8rfgz3ji3p2vg3rfag7lvry",
+    "fields": {
+        "session_data": ".eJxVjjsOwyAQBa8SUccIWDDYZfqcAcEuBJLISP5UUe6eWHLj9s1o9D4sJyzB16libWxkSijTCeiEvQgYQY5acQGDEoZdmQ_bWvy2pNlX-stSnscY8JWmndAzTI_GsU3rXCPfFX7Qhd8bpfftcE-BEpayn3COLBI642KM2KcBtUFNgJIIIGnSpJxQKZMWuQ-ZwBACRWtzdENg3x-ZxERc:1tqNV9:NQlMvAEpv-3zjAVNPGikyMFZTFqeJPgiVqZrgSjagdc",
+        "expire_date": "2025-03-21T03:31:51.883"
+    }
+},
+{
+    "model": "servidor.usuario",
+    "pk": 1,
+    "fields": {
+        "password": "By decide head develop entire. Study guess new go out whom.",
+        "last_login": "2007-11-26T05:12:02.938",
+        "is_superuser": false,
+        "username": "lrobbins",
+        "first_name": "William",
+        "last_name": "King",
+        "email": "greenjoann@example.net",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2025-03-07T01:48:10.449",
+        "rol": 3,
+        "email_confirmado": false,
+        "fecha_registro": "1975-04-10T03:46:27.172",
+        "ultima_conexion": "1970-08-28T23:05:57.401",
+        "biografia": "All wish possible. Involve recognize catch field professional six. Deal face indeed threat short buy success.\nAgree within amount share. Seven law week clearly contain wide position.",
+        "telefono": "Eye cultural.",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "servidor.usuario",
+    "pk": 2,
+    "fields": {
+        "password": "View level four but. Same your fight discussion.",
+        "last_login": "2018-10-19T16:29:19.742",
+        "is_superuser": true,
+        "username": "steven06",
+        "first_name": "Andrew",
+        "last_name": "Gallagher",
+        "email": "carrolljermaine@example.net",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2025-03-07T01:48:10.449",
+        "rol": 3,
+        "email_confirmado": false,
+        "fecha_registro": "2011-08-17T09:19:14.803",
+        "ultima_conexion": "2006-08-05T15:36:40.180",
+        "biografia": "Take international candidate loss theory three small. Civil question statement eye card.\nCivil another trouble trade board attorney. Resource commercial agency economy discover collection.",
+        "telefono": "Ten spend.",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "servidor.usuario",
+    "pk": 3,
+    "fields": {
+        "password": "Hour television trouble organization. Wear foreign bit two middle court.",
+        "last_login": "2010-03-05T15:16:57.606",
+        "is_superuser": false,
+        "username": "joshua40",
+        "first_name": "Bryce",
+        "last_name": "Poole",
+        "email": "ann89@example.com",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-03-07T01:48:10.449",
+        "rol": 3,
+        "email_confirmado": false,
+        "fecha_registro": "2003-02-08T10:51:28.958",
+        "ultima_conexion": "2013-03-08T06:13:35.023",
+        "biografia": "Pm simply light him. Happy prepare way she. Focus cause bad man daughter according boy light. Section sure general knowledge price few.",
+        "telefono": "Magazine half.",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "servidor.usuario",
+    "pk": 4,
+    "fields": {
+        "password": "Base stay hour ok arm. Remain usually consumer yet deal. Manage wide concern time street.",
+        "last_login": "2009-12-27T18:45:12.305",
+        "is_superuser": false,
+        "username": "matthewharvey",
+        "first_name": "Kim",
+        "last_name": "Sullivan",
+        "email": "haysdonald@example.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-03-07T01:48:10.449",
+        "rol": 3,
+        "email_confirmado": false,
+        "fecha_registro": "1995-05-26T09:36:07.782",
+        "ultima_conexion": "1976-06-22T20:04:29.724",
+        "biografia": "House Mrs hour. Because do get because hair start edge feel. Address garden contain each over.\nSee among former half watch. Education tell property.",
+        "telefono": "College home.",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "servidor.usuario",
+    "pk": 5,
+    "fields": {
+        "password": "Fight collection business wind share remember. Next than explain authority. Hundred at country market.",
+        "last_login": "1993-04-21T16:27:27.922",
+        "is_superuser": false,
+        "username": "mercadohannah",
+        "first_name": "Lauren",
+        "last_name": "Burton",
+        "email": "randallperez@example.com",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-03-07T01:48:10.449",
+        "rol": 3,
+        "email_confirmado": true,
+        "fecha_registro": "2008-05-10T03:40:21.896",
+        "ultima_conexion": "2020-12-03T11:37:23.346",
+        "biografia": "Collection tend cell specific. Candidate sit media machine sense. Dark require against whether role. Play admit service.",
+        "telefono": "Ask reach.",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "servidor.usuario",
+    "pk": 6,
+    "fields": {
+        "password": "Game work serve hospital among. Answer medical finally nation language.",
+        "last_login": "1994-04-18T23:53:52.136",
+        "is_superuser": true,
+        "username": "teresa18",
+        "first_name": "Shaun",
+        "last_name": "Lee",
+        "email": "mirandajeffery@example.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2025-03-07T01:48:10.449",
+        "rol": 3,
+        "email_confirmado": true,
+        "fecha_registro": "1982-02-19T09:56:24.792",
+        "ultima_conexion": "2023-03-03T20:10:08.777",
+        "biografia": "Dream theory market practice pressure two itself. Card say focus from all anything. Only must including animal.",
+        "telefono": "Trip will be.",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "servidor.usuario",
+    "pk": 7,
+    "fields": {
+        "password": "Watch it camera. Party field table task. Edge be glass.",
+        "last_login": "2021-10-25T06:58:40.157",
+        "is_superuser": true,
+        "username": "theresa86",
+        "first_name": "Alyssa",
+        "last_name": "Freeman",
+        "email": "melaniesimpson@example.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2025-03-07T01:48:10.449",
+        "rol": 3,
+        "email_confirmado": true,
+        "fecha_registro": "1972-04-03T05:06:33.588",
+        "ultima_conexion": "1999-08-03T13:05:41.434",
+        "biografia": "Sell consider truth I picture fear. Analysis ground across large return end. Small season know education space try by.\nMedical guy officer decade I. Success bring tree training kid.",
+        "telefono": "Staff benefit.",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "servidor.usuario",
+    "pk": 8,
+    "fields": {
+        "password": "Out help image industry travel teach. Make late who quickly shoulder which.",
+        "last_login": "1971-06-17T03:12:08.851",
+        "is_superuser": true,
+        "username": "joanna34",
+        "first_name": "Tony",
+        "last_name": "Thomas",
+        "email": "zlane@example.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2025-03-07T01:48:10.449",
+        "rol": 3,
+        "email_confirmado": true,
+        "fecha_registro": "2000-12-13T06:09:49.403",
+        "ultima_conexion": "2013-11-25T20:16:57.261",
+        "biografia": "Training generation the wish outside I which. Religious strategy camera interesting actually ten. Explain focus back responsibility worker. Anything need reduce price win professor.",
+        "telefono": "Plan all work.",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "servidor.usuario",
+    "pk": 9,
+    "fields": {
+        "password": "Much during read field friend short hospital. Ten suggest such out standard.",
+        "last_login": "2018-12-23T02:05:44.778",
+        "is_superuser": true,
+        "username": "johncohen",
+        "first_name": "George",
+        "last_name": "Lowery",
+        "email": "kristi16@example.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-03-07T01:48:10.449",
+        "rol": 3,
+        "email_confirmado": true,
+        "fecha_registro": "2018-03-08T16:52:32.049",
+        "ultima_conexion": "1979-02-15T14:49:00.665",
+        "biografia": "Star any support now. View save central many herself. Development office simple must field simple.",
+        "telefono": "While cell.",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "servidor.usuario",
+    "pk": 10,
+    "fields": {
+        "password": "Return those near exist. They late over include manager clearly remain. Rather late loss doctor.",
+        "last_login": "2012-08-16T12:44:49.951",
+        "is_superuser": true,
+        "username": "wendyrodriguez",
+        "first_name": "Daniel",
+        "last_name": "Jordan",
+        "email": "fdillon@example.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2025-03-07T01:48:10.449",
+        "rol": 3,
+        "email_confirmado": false,
+        "fecha_registro": "1972-03-17T10:51:15.777",
+        "ultima_conexion": "1983-03-07T03:23:26.401",
+        "biografia": "Week wear foot type. This believe language walk dark pretty.",
+        "telefono": "Design offer.",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "servidor.usuario",
+    "pk": 11,
+    "fields": {
+        "password": "pbkdf2_sha256$870000$iByEJrMGSYR8tRlcqmW5Ty$sqFTWUaUN/eCoWsF3xbuzeclhKmT3CE/U1UPv+HUHvg=",
+        "last_login": "2025-03-07T09:21:11.759",
+        "is_superuser": true,
+        "username": "fran",
+        "first_name": "",
+        "last_name": "",
+        "email": "franciscoriveragil@gmail.com",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-03-07T01:49:13.688",
+        "rol": 1,
+        "email_confirmado": false,
+        "fecha_registro": "2025-03-07T01:49:13.920",
+        "ultima_conexion": "2025-03-07T01:50:06.448",
+        "biografia": "ththth",
+        "telefono": "123456789",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "servidor.usuario",
+    "pk": 12,
+    "fields": {
+        "password": "",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "qw",
+        "first_name": "",
+        "last_name": "",
+        "email": "francisco.rivera.gil.al@iespoligonosur.org",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2025-03-07T01:52:26.204",
+        "rol": 1,
+        "email_confirmado": true,
+        "fecha_registro": "2025-03-07T01:52:26.206",
+        "ultima_conexion": "2025-03-07T01:52:26.206",
+        "biografia": "fvfrvf",
+        "telefono": "123456789",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "servidor.usuario",
+    "pk": 13,
+    "fields": {
+        "password": "pbkdf2_sha256$870000$qmEjE7PgHdNBZqOX8mjUFE$GPcq4IWY88Zf6lXe9bGYPxCQdQtzStOznPYovbpjdrE=",
+        "last_login": "2025-03-07T02:29:40.999",
+        "is_superuser": false,
+        "username": "manu",
+        "first_name": "",
+        "last_name": "",
+        "email": "francisco.rivera.gil.al@iespoligonosur.org",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2025-03-07T02:05:54.074",
+        "rol": 3,
+        "email_confirmado": false,
+        "fecha_registro": "2025-03-07T02:05:54.319",
+        "ultima_conexion": "2025-03-07T02:05:54.319",
+        "biografia": null,
+        "telefono": null,
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "servidor.usuario",
+    "pk": 14,
+    "fields": {
+        "password": "pbkdf2_sha256$870000$R3bMSLK01XDh8EIq5yJjNJ$XOWesywCMACTgz+GNPbWqYfqWrkADQRxwj6giTle5ZA=",
+        "last_login": "2025-03-07T02:09:47.257",
+        "is_superuser": false,
+        "username": "ka",
+        "first_name": "",
+        "last_name": "",
+        "email": "francisco.rivera.gil.al@iespoligonosur.org",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2025-03-07T02:09:32.926",
+        "rol": 2,
+        "email_confirmado": false,
+        "fecha_registro": "2025-03-07T02:09:33.159",
+        "ultima_conexion": "2025-03-07T02:09:33.159",
+        "biografia": null,
+        "telefono": null,
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "servidor.usuario",
+    "pk": 15,
+    "fields": {
+        "password": "pbkdf2_sha256$870000$I88ptfm0nKs7X0Jaj6J9NG$46uxh5RTZymezFrCyaL03xJpYfkXMBwztLqk26r6IMY=",
+        "last_login": "2025-03-07T02:39:42.287",
+        "is_superuser": false,
+        "username": "jj",
+        "first_name": "",
+        "last_name": "",
+        "email": "francisco.rivera.gil.al@iespoligonosur.org",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2025-03-07T02:15:41.700",
+        "rol": 2,
+        "email_confirmado": false,
+        "fecha_registro": "2025-03-07T02:15:41.944",
+        "ultima_conexion": "2025-03-07T02:15:41.944",
+        "biografia": null,
+        "telefono": null,
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "servidor.usuario",
+    "pk": 16,
+    "fields": {
+        "password": "pbkdf2_sha256$870000$KzlxOCjKViXfqgrJKkSKCX$hZVYww+4GLqr8u+g1Z/LpaA16kxiHeC+mCVZbDroDx8=",
+        "last_login": "2025-03-07T02:30:07.055",
+        "is_superuser": false,
+        "username": "manolo",
+        "first_name": "",
+        "last_name": "",
+        "email": "francisco.rivera.gil.al@iespoligonosur.org",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2025-03-07T02:30:06.780",
+        "rol": 2,
+        "email_confirmado": false,
+        "fecha_registro": "2025-03-07T02:30:07.034",
+        "ultima_conexion": "2025-03-07T02:30:07.034",
+        "biografia": null,
+        "telefono": null,
+        "groups": [
+            2
+        ],
+        "user_permissions": []
+    }
+},
+{
+    "model": "servidor.usuario",
+    "pk": 17,
+    "fields": {
+        "password": "pbkdf2_sha256$870000$Gker3ZCLXL0qXTYYBWlBRs$wKPH088UJhIJE+5ajBCNe/Pnj4RaKf5d3JRq5NI5Uu8=",
+        "last_login": "2025-03-07T02:40:07.488",
+        "is_superuser": false,
+        "username": "hh",
+        "first_name": "",
+        "last_name": "",
+        "email": "francisco.rivera.gil.al@iespoligonosur.org",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2025-03-07T02:40:07.223",
+        "rol": 2,
+        "email_confirmado": false,
+        "fecha_registro": "2025-03-07T02:40:07.469",
+        "ultima_conexion": "2025-03-07T02:40:07.469",
+        "biografia": null,
+        "telefono": null,
+        "groups": [
+            2
+        ],
+        "user_permissions": []
+    }
+},
+{
+    "model": "servidor.usuario",
+    "pk": 18,
+    "fields": {
+        "password": "pbkdf2_sha256$870000$JsIBD2CGob0GwGboAmaHma$/a5Z/CcVEvljS68jr/bKzsIXsEBjQyo6nGWsgWRXeus=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "emilio",
+        "first_name": "",
+        "last_name": "",
+        "email": "francisco.gil.al@iespoligonosur.org",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2025-03-07T07:11:07.702",
+        "rol": 2,
+        "email_confirmado": false,
+        "fecha_registro": "2025-03-07T07:11:07.935",
+        "ultima_conexion": "2025-03-07T07:11:07.935",
+        "biografia": "erfr",
+        "telefono": "123456789",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "servidor.creadordeaplicaciones",
+    "pk": 1,
+    "fields": {
+        "usuario": 6,
+        "apps_creadas": []
+    }
+},
+{
+    "model": "servidor.creadordeaplicaciones",
+    "pk": 2,
+    "fields": {
+        "usuario": 5,
+        "apps_creadas": []
+    }
+},
+{
+    "model": "servidor.creadordeaplicaciones",
+    "pk": 3,
+    "fields": {
+        "usuario": 4,
+        "apps_creadas": []
+    }
+},
+{
+    "model": "servidor.creadordeaplicaciones",
+    "pk": 4,
+    "fields": {
+        "usuario": 7,
+        "apps_creadas": []
+    }
+},
+{
+    "model": "servidor.creadordeaplicaciones",
+    "pk": 5,
+    "fields": {
+        "usuario": 1,
+        "apps_creadas": []
+    }
+},
+{
+    "model": "servidor.creadordeaplicaciones",
+    "pk": 6,
+    "fields": {
+        "usuario": 10,
+        "apps_creadas": []
+    }
+},
+{
+    "model": "servidor.creadordeaplicaciones",
+    "pk": 7,
+    "fields": {
+        "usuario": 8,
+        "apps_creadas": []
+    }
+},
+{
+    "model": "servidor.creadordeaplicaciones",
+    "pk": 8,
+    "fields": {
+        "usuario": 2,
+        "apps_creadas": []
+    }
+},
+{
+    "model": "servidor.creadordeaplicaciones",
+    "pk": 9,
+    "fields": {
+        "usuario": 3,
+        "apps_creadas": []
+    }
+},
+{
+    "model": "servidor.creadordeaplicaciones",
+    "pk": 10,
+    "fields": {
+        "usuario": 9,
+        "apps_creadas": []
+    }
+},
+{
+    "model": "servidor.creadordeaplicaciones",
+    "pk": 11,
+    "fields": {
+        "usuario": 14,
+        "apps_creadas": []
+    }
+},
+{
+    "model": "servidor.creadordeaplicaciones",
+    "pk": 12,
+    "fields": {
+        "usuario": 15,
+        "apps_creadas": []
+    }
+},
+{
+    "model": "servidor.creadordeaplicaciones",
+    "pk": 13,
+    "fields": {
+        "usuario": 16,
+        "apps_creadas": []
+    }
+},
+{
+    "model": "servidor.creadordeaplicaciones",
+    "pk": 14,
+    "fields": {
+        "usuario": 17,
+        "apps_creadas": []
+    }
+},
+{
+    "model": "servidor.clienteapp",
+    "pk": 1,
+    "fields": {
+        "usuario": 5,
+        "apps_favoritas": []
+    }
+},
+{
+    "model": "servidor.clienteapp",
+    "pk": 2,
+    "fields": {
+        "usuario": 7,
+        "apps_favoritas": []
+    }
+},
+{
+    "model": "servidor.clienteapp",
+    "pk": 3,
+    "fields": {
+        "usuario": 8,
+        "apps_favoritas": []
+    }
+},
+{
+    "model": "servidor.clienteapp",
+    "pk": 4,
+    "fields": {
+        "usuario": 10,
+        "apps_favoritas": []
+    }
+},
+{
+    "model": "servidor.clienteapp",
+    "pk": 5,
+    "fields": {
+        "usuario": 3,
+        "apps_favoritas": []
+    }
+},
+{
+    "model": "servidor.clienteapp",
+    "pk": 6,
+    "fields": {
+        "usuario": 9,
+        "apps_favoritas": []
+    }
+},
+{
+    "model": "servidor.clienteapp",
+    "pk": 7,
+    "fields": {
+        "usuario": 6,
+        "apps_favoritas": []
+    }
+},
+{
+    "model": "servidor.clienteapp",
+    "pk": 8,
+    "fields": {
+        "usuario": 1,
+        "apps_favoritas": []
+    }
+},
+{
+    "model": "servidor.clienteapp",
+    "pk": 9,
+    "fields": {
+        "usuario": 4,
+        "apps_favoritas": []
+    }
+},
+{
+    "model": "servidor.clienteapp",
+    "pk": 10,
+    "fields": {
+        "usuario": 2,
+        "apps_favoritas": []
+    }
+},
+{
+    "model": "servidor.clienteapp",
+    "pk": 11,
+    "fields": {
+        "usuario": 13,
+        "apps_favoritas": []
+    }
+},
+{
+    "model": "servidor.mobileapp",
+    "pk": 1,
+    "fields": {
+        "nombre": "Us key read performance unit important late. Present wife indicate bit use message.",
+        "descripcion": "Mean budget side easy skill. Commercial support out front or conference.\nDuring half different despite character water training.",
+        "fecha_creacion": "1972-08-28T00:20:49.117",
+        "desarrollador": 10,
+        "descargas": 5032,
+        "categoria": "Save foot card tax. Everyone others him."
+    }
+},
+{
+    "model": "servidor.mobileapp",
+    "pk": 2,
+    "fields": {
+        "nombre": "Improve mouth themselves under only. Third white offer pay light set doctor.",
+        "descripcion": "Assume to usually article rich authority character worry. Science discover better. Send line soon human own on art.",
+        "fecha_creacion": "2015-03-20T01:25:18.860",
+        "desarrollador": 6,
+        "descargas": 21002,
+        "categoria": "Decision drive choose water."
+    }
+},
+{
+    "model": "servidor.mobileapp",
+    "pk": 3,
+    "fields": {
+        "nombre": "Room find condition live. White born why present collection.\nFine black I because baby land head.",
+        "descripcion": "Computer strategy pretty threat sometimes part particularly customer. Total model condition get scene. Whole political traditional ever others view.",
+        "fecha_creacion": "2019-03-27T18:01:08.963",
+        "desarrollador": 6,
+        "descargas": 30196,
+        "categoria": "Garden discuss truth force or check race."
+    }
+},
+{
+    "model": "servidor.mobileapp",
+    "pk": 4,
+    "fields": {
+        "nombre": "Money way become other one.",
+        "descripcion": "Himself suggest radio offer read total month. Help sport bar event. Spring travel blue task Democrat hot piece action.\nRemain various man me allow oil lot painting.",
+        "fecha_creacion": "1996-10-12T08:48:56.757",
+        "desarrollador": 8,
+        "descargas": 9257,
+        "categoria": "Attention American specific."
+    }
+},
+{
+    "model": "servidor.mobileapp",
+    "pk": 5,
+    "fields": {
+        "nombre": "Myself hope third throughout reason meet. Election represent behind relate during work.",
+        "descripcion": "Much along fall control. Both truth television rather certain recognize.\nEmployee enough big nor. Official director value same better personal be husband.",
+        "fecha_creacion": "2003-05-10T20:37:41.203",
+        "desarrollador": 7,
+        "descargas": 10386,
+        "categoria": "Positive guy identify better."
+    }
+},
+{
+    "model": "servidor.mobileapp",
+    "pk": 6,
+    "fields": {
+        "nombre": "Bag least strong box upon last business especially.",
+        "descripcion": "Product who reflect water care white. Just address section listen travel heavy accept. Better best arrive rest.",
+        "fecha_creacion": "1983-07-28T08:12:29.644",
+        "desarrollador": 5,
+        "descargas": 11119,
+        "categoria": "Hand necessary the positive happy reveal matter."
+    }
+},
+{
+    "model": "servidor.mobileapp",
+    "pk": 7,
+    "fields": {
+        "nombre": "Ready activity fish later. During after low big edge mean.",
+        "descripcion": "Want would kind drug career. Trade just movie quite.\nThousand result tough strategy meeting school fact. College truth want never these order develop out. Reflect under share not response.",
+        "fecha_creacion": "2023-05-18T08:04:38.609",
+        "desarrollador": 10,
+        "descargas": 14194,
+        "categoria": "Situation firm rest majority play role follow."
+    }
+},
+{
+    "model": "servidor.mobileapp",
+    "pk": 8,
+    "fields": {
+        "nombre": "Peace big side forget member. Story table hit too hour west Mr again.",
+        "descripcion": "From right ever contain police four final. Head remain company thing. Job product painting enough.\nUsually yes himself around staff player study ok. Gas receive officer along forget take.",
+        "fecha_creacion": "2008-02-06T04:39:39.523",
+        "desarrollador": 7,
+        "descargas": 19877,
+        "categoria": "Better officer five type agree."
+    }
+},
+{
+    "model": "servidor.mobileapp",
+    "pk": 9,
+    "fields": {
+        "nombre": "Work that write later clear instead decision. Father eye too southern class policy.",
+        "descripcion": "Reality for thus baby brother small article. Challenge among action left father. Civil democratic with level should.\nTen local try participant pressure pay.",
+        "fecha_creacion": "1988-04-12T02:43:57.406",
+        "desarrollador": 6,
+        "descargas": 11636,
+        "categoria": "But himself paper management education."
+    }
+},
+{
+    "model": "servidor.mobileapp",
+    "pk": 10,
+    "fields": {
+        "nombre": "Good guy movie cost own film.\nHe expect age media eight. Health force care.",
+        "descripcion": "Interest fine use generation model sing federal. According similar begin nice.\nCause kitchen computer peace form factor. Here identify cold human whole soldier together.",
+        "fecha_creacion": "2003-08-21T12:05:16.310",
+        "desarrollador": 10,
+        "descargas": 14284,
+        "categoria": "Summer you feel address job million."
+    }
+},
+{
+    "model": "servidor.mobileapp",
+    "pk": 11,
+    "fields": {
+        "nombre": "ddd",
+        "descripcion": "vdv",
+        "fecha_creacion": "2025-03-07T02:24:03.546",
+        "desarrollador": 12,
+        "descargas": 0,
+        "categoria": "dd"
+    }
+},
+{
+    "model": "servidor.mobileapp",
+    "pk": 12,
+    "fields": {
+        "nombre": "ggg",
+        "descripcion": "ggg",
+        "fecha_creacion": "2025-03-07T02:30:20.992",
+        "desarrollador": 13,
+        "descargas": 0,
+        "categoria": "ggg"
+    }
+},
+{
+    "model": "servidor.mobileapp",
+    "pk": 13,
+    "fields": {
+        "nombre": "u",
+        "descripcion": "gg",
+        "fecha_creacion": "2025-03-07T02:43:03.430",
+        "desarrollador": 14,
+        "descargas": 0,
+        "categoria": "3"
+    }
+},
+{
+    "model": "servidor.mobileapp",
+    "pk": 14,
+    "fields": {
+        "nombre": "fvfvf",
+        "descripcion": "fvv",
+        "fecha_creacion": "2025-03-07T02:56:16.477",
+        "desarrollador": 14,
+        "descargas": 0,
+        "categoria": "fv"
+    }
+},
+{
+    "model": "servidor.comentario",
+    "pk": 1,
+    "fields": {
+        "texto": "Foreign staff concern there actually. Out spring myself voice lay next.\nOpportunity building indicate. Know least determine especially. Soon seek thank which decade music.",
+        "app": 2,
+        "usuario": 10,
+        "fecha_creacion": "2003-06-15T16:18:03.764",
+        "calificacion": 5,
+        "editado": true,
+        "respuesta": "Standard entire race man experience play. Almost director technology thought myself defense college. Including small involve resource election. Total coach just ago."
+    }
+},
+{
+    "model": "servidor.comentario",
+    "pk": 2,
+    "fields": {
+        "texto": "Future possible pretty state as sound yet article. Figure research decade environment consider cell west. Former order serve single whether weight age.\nFind increase focus.",
+        "app": 5,
+        "usuario": 10,
+        "fecha_creacion": "1972-12-25T02:24:31.524",
+        "calificacion": 5,
+        "editado": true,
+        "respuesta": "Service green letter baby figure girl. True new again form bit provide goal. Major peace operation among third religious."
+    }
+},
+{
+    "model": "servidor.comentario",
+    "pk": 3,
+    "fields": {
+        "texto": "Apply the house career important phone old. Something interview expert score. Service put whole nation reflect effect.",
+        "app": 8,
+        "usuario": 2,
+        "fecha_creacion": "1984-07-27T02:09:28.228",
+        "calificacion": 5,
+        "editado": true,
+        "respuesta": "Ability else last industry wear enough.\nAgency base into seven space fight.\nUp speak mother perform rich book. Your without partner sometimes morning find. Number player director author."
+    }
+},
+{
+    "model": "servidor.comentario",
+    "pk": 4,
+    "fields": {
+        "texto": "Expect spring month. Think little number anything.\nRisk mother environmental as peace. Beautiful short tree interesting commercial.\nMaterial even mean poor serve such. Federal spend choice.",
+        "app": 9,
+        "usuario": 2,
+        "fecha_creacion": "1982-02-25T12:10:30.928",
+        "calificacion": 5,
+        "editado": false,
+        "respuesta": "Your there every moment game watch up. Along case win forget.\nAll pay fine throughout rest religious. Let traditional each billion too least."
+    }
+},
+{
+    "model": "servidor.comentario",
+    "pk": 5,
+    "fields": {
+        "texto": "Big treat father doctor. Assume ball traditional fund mouth early style.\nSeat structure financial. Yourself public water population quite total professional admit.",
+        "app": 2,
+        "usuario": 9,
+        "fecha_creacion": "1984-02-08T18:20:24.745",
+        "calificacion": 5,
+        "editado": false,
+        "respuesta": "Himself Republican speak start. Face letter character husband inside. Fire partner dark card."
+    }
+},
+{
+    "model": "servidor.comentario",
+    "pk": 6,
+    "fields": {
+        "texto": "Though team in growth organization. Scientist poor worker fire often many table. Half stage ball should kind level.",
+        "app": 7,
+        "usuario": 1,
+        "fecha_creacion": "2024-04-05T00:06:45.081",
+        "calificacion": 5,
+        "editado": false,
+        "respuesta": "Meeting teach black stock agent huge even. Reality listen notice level maintain. Care mean but organization letter."
+    }
+},
+{
+    "model": "servidor.comentario",
+    "pk": 7,
+    "fields": {
+        "texto": "Relationship these itself list dream security blue. Despite affect glass including white challenge.",
+        "app": 5,
+        "usuario": 10,
+        "fecha_creacion": "1986-02-18T08:39:49.309",
+        "calificacion": 5,
+        "editado": true,
+        "respuesta": "Close including unit body.\nAir food part skill grow. Beautiful country money painting.\nWhose other work sing large mean. Professor third consumer account drop program."
+    }
+},
+{
+    "model": "servidor.comentario",
+    "pk": 8,
+    "fields": {
+        "texto": "Ago officer like experience sense rule work. Who speak almost ago doctor. Hundred evening chance theory memory bad.",
+        "app": 6,
+        "usuario": 9,
+        "fecha_creacion": "1980-03-27T12:58:05.489",
+        "calificacion": 5,
+        "editado": false,
+        "respuesta": "Fear such let price ok nation. Mouth save develop hit beat education. Relate unit reach trial."
+    }
+},
+{
+    "model": "servidor.comentario",
+    "pk": 9,
+    "fields": {
+        "texto": "Fast strategy song middle trip energy paper. Daughter policy back soon person develop. Start two network anyone.",
+        "app": 9,
+        "usuario": 3,
+        "fecha_creacion": "1999-12-16T23:10:40.168",
+        "calificacion": 5,
+        "editado": true,
+        "respuesta": "Likely table institution serve.\nStatement meeting much skin office other feel. Pattern say rise son.\nResearch if evening check. Audience across computer growth teach democratic treat adult."
+    }
+},
+{
+    "model": "servidor.comentario",
+    "pk": 10,
+    "fields": {
+        "texto": "Star happen quite accept suddenly song whatever result. Shake American simply high run. Imagine tax own unit. Huge drive own play.",
+        "app": 5,
+        "usuario": 6,
+        "fecha_creacion": "2014-10-23T17:18:55.876",
+        "calificacion": 5,
+        "editado": true,
+        "respuesta": "Parent discuss I reflect themselves yourself. Church whether age power.\nNearly husband evidence. Agent whole among continue later room.\nNewspaper huge scene standard who. Necessary star dream your."
+    }
+},
+{
+    "model": "servidor.comentario",
+    "pk": 11,
+    "fields": {
+        "texto": "erere",
+        "app": 1,
+        "usuario": 11,
+        "fecha_creacion": "2025-03-07T02:24:59.118",
+        "calificacion": 5,
+        "editado": false,
+        "respuesta": null
+    }
+},
+{
+    "model": "servidor.comentario",
+    "pk": 12,
+    "fields": {
+        "texto": "eee",
+        "app": 1,
+        "usuario": 17,
+        "fecha_creacion": "2025-03-07T02:56:05.226",
+        "calificacion": 5,
+        "editado": false,
+        "respuesta": null
+    }
+},
+{
+    "model": "servidor.comentario",
+    "pk": 13,
+    "fields": {
+        "texto": "hyyh",
+        "app": 1,
+        "usuario": 11,
+        "fecha_creacion": "2025-03-07T04:50:53.367",
+        "calificacion": 5,
+        "editado": false,
+        "respuesta": null
+    }
+},
+{
+    "model": "servidor.comentario",
+    "pk": 14,
+    "fields": {
+        "texto": "rfrfrfrf",
+        "app": 3,
+        "usuario": 2,
+        "fecha_creacion": "2025-03-07T07:35:35.388",
+        "calificacion": 2,
+        "editado": false,
+        "respuesta": "rfrf"
+    }
+},
+{
+    "model": "servidor.comentario",
+    "pk": 15,
+    "fields": {
+        "texto": "rfrfrfrfyhh",
+        "app": 3,
+        "usuario": 2,
+        "fecha_creacion": "2025-03-07T07:35:50.018",
+        "calificacion": 2,
+        "editado": false,
+        "respuesta": ""
+    }
+},
+{
+    "model": "oauth2_provider.application",
+    "pk": 1,
+    "fields": {
+        "client_id": "mi_aplicacion",
+        "user": 11,
+        "redirect_uris": "",
+        "post_logout_redirect_uris": "",
+        "client_type": "confidential",
+        "authorization_grant_type": "password",
+        "client_secret": "mi_clave_secreta",
+        "hash_client_secret": false,
+        "name": "mi_aplicacion",
+        "skip_authorization": false,
+        "created": "2025-03-07T03:11:07.408",
+        "updated": "2025-03-07T03:11:07.408",
+        "algorithm": "",
+        "allowed_origins": ""
+    }
+},
+{
+    "model": "oauth2_provider.accesstoken",
+    "pk": 1,
+    "fields": {
+        "user": 11,
+        "source_refresh_token": null,
+        "token": "1exVe2tL2XesdqzhC3nlU41yNPmSrs",
+        "token_checksum": "bad771373ecd1bb6ae9d1a6a2e94e8e6478c0ec4a1c1648e0e6c78e3fe72ef61",
+        "id_token": null,
+        "application": 1,
+        "expires": "2036-08-02T19:11:51.959",
+        "scope": "read write groups",
+        "created": "2025-03-07T03:11:51.959",
+        "updated": "2025-03-07T03:11:51.959"
+    }
+},
+{
+    "model": "oauth2_provider.accesstoken",
+    "pk": 2,
+    "fields": {
+        "user": 13,
+        "source_refresh_token": null,
+        "token": "tBBBBxHDMtHVPa9qYFJB2NtlaRY1uE",
+        "token_checksum": "fcec29e11f3800bad4f4682180dc482e0722eb24c6cc4646709e2e27c2e09313",
+        "id_token": null,
+        "application": 1,
+        "expires": "2036-08-02T19:44:43.245",
+        "scope": "read write groups",
+        "created": "2025-03-07T03:44:43.245",
+        "updated": "2025-03-07T03:44:43.245"
+    }
+},
+{
+    "model": "oauth2_provider.accesstoken",
+    "pk": 3,
+    "fields": {
+        "user": 17,
+        "source_refresh_token": null,
+        "token": "e5DrU3lDazisHoUwQXXUOh6hSEoIFT",
+        "token_checksum": "748c78653c6441d3916f7ab293fafbf834f4412243c1e8f2886e6ade785e0bae",
+        "id_token": null,
+        "application": 1,
+        "expires": "2036-08-02T19:45:40.009",
+        "scope": "read write groups",
+        "created": "2025-03-07T03:45:40.009",
+        "updated": "2025-03-07T03:45:40.009"
+    }
+},
+{
+    "model": "oauth2_provider.refreshtoken",
+    "pk": 1,
+    "fields": {
+        "user": 11,
+        "token": "mDNMMDwNLBSGbNk27JGnuTAeZER1hP",
+        "application": 1,
+        "access_token": 1,
+        "token_family": "be9e825d-d1dc-47da-8fd1-084f3004402d",
+        "created": "2025-03-07T03:11:51.963",
+        "updated": "2025-03-07T03:11:51.963",
+        "revoked": null
+    }
+},
+{
+    "model": "oauth2_provider.refreshtoken",
+    "pk": 2,
+    "fields": {
+        "user": 13,
+        "token": "bxYxLBZWOBaaGNVrhWyXO0MVZab6im",
+        "application": 1,
+        "access_token": 2,
+        "token_family": "69945ea1-8c2a-4e4f-99ce-bb8ad9152d8c",
+        "created": "2025-03-07T03:44:43.246",
+        "updated": "2025-03-07T03:44:43.246",
+        "revoked": null
+    }
+},
+{
+    "model": "oauth2_provider.refreshtoken",
+    "pk": 3,
+    "fields": {
+        "user": 17,
+        "token": "Jm7dHAhzJ3ROiz7clvxwXSEXHHz3VT",
+        "application": 1,
+        "access_token": 3,
+        "token_family": "a4a3150c-579c-4a10-947e-4be55bab95ba",
+        "created": "2025-03-07T03:45:40.010",
+        "updated": "2025-03-07T03:45:40.010",
+        "revoked": null
+    }
+}
+]

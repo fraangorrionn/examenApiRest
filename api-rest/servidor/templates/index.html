@@ -1,0 +1,10 @@
+{% extends 'principal.html' %}
+
+{% block title %}Inicio{% endblock %}
+
+{% block content %}
+    <h2>Bienvenido a la API de Aplicaciones Móviles</h2>
+    <p>Sesión iniciada el: {{ fecha_inicio }}</p>
+    <p>Explora las aplicaciones disponibles y deja tus comentarios.</p>
+    <a href="{% url 'lista_apps' %}">Ver aplicaciones</a>
+{% endblock %}

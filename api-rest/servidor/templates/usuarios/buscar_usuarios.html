@@ -1,0 +1,114 @@
+{% extends 'principal.html' %}
+
+{% block title %}Buscar Usuarios{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <h1 class="text-center">Buscar Usuarios</h1>
+
+    <!-- Formulario de búsqueda avanzada -->
+    <form method="GET" class="border p-4 bg-light shadow-sm rounded">
+        <div class="row g-3">
+            <div class="col-md-6">
+                <label for="id_query" class="form-label">Búsqueda Global</label>
+                {{ form.query }}
+            </div>
+            <div class="col-md-3">
+                <label for="id_username" class="form-label">Nombre de Usuario</label>
+                {{ form.username }}
+            </div>
+            <div class="col-md-3">
+                <label for="id_email" class="form-label">Correo Electrónico</label>
+                {{ form.email }}
+            </div>
+            <div class="col-md-3">
+                <label for="id_rol" class="form-label">Rol</label>
+                {{ form.rol }}
+            </div>
+            <div class="col-md-3">
+                <label for="id_fecha_registro_desde" class="form-label">Registrado Desde</label>
+                {{ form.fecha_registro_desde }}
+            </div>
+            <div class="col-md-3">
+                <label for="id_fecha_registro_hasta" class="form-label">Registrado Hasta</label>
+                {{ form.fecha_registro_hasta }}
+            </div>
+            <div class="col-md-3">
+                <label for="id_ultima_conexion_desde" class="form-label">Última Conexión Desde</label>
+                {{ form.ultima_conexion_desde }}
+            </div>
+            <div class="col-md-3">
+                <label for="id_ultima_conexion_hasta" class="form-label">Última Conexión Hasta</label>
+                {{ form.ultima_conexion_hasta }}
+            </div>
+            <div class="col-md-3">
+                <label class="form-label">Email Confirmado</label>
+                {{ form.email_confirmado }}
+            </div>
+            <div class="col-md-3">
+                <label class="form-label">Biografía</label>
+                {{ form.biografia }}
+            </div>
+            <div class="col-md-3">
+                <label class="form-label">Teléfono</label>
+                {{ form.telefono }}
+            </div>
+            
+            <div class="col-md-12 text-center">
+                <button type="submit" class="btn btn-primary">Buscar</button>
+                <a href="{% url 'buscar_usuarios' %}" class="btn btn-secondary">Limpiar</a>
+            </div>
+        </div>
+    </form>
+
+    <!-- Tabla de resultados -->
+    <h2 class="mt-4 text-center">Resultados</h2>
+    <table class="table table-striped table-bordered mt-4">
+        <thead class="table-dark">
+            <tr>
+                <th>Nombre</th>
+                <th>Email</th>
+                <th>Rol</th>
+                <th>Confirmado</th>
+                <th>Biografía</th>
+                <th>Teléfono</th>
+                <th>Registrado</th>
+                {% if perms.auth.change_user or perms.auth.delete_user %}
+                    <th>Acciones</th>
+                {% endif %}
+            </tr>
+        </thead>
+        <tbody>
+            {% for usuario in usuarios %}
+            <tr>
+                <td>{{ usuario.username }}</td>
+                <td>{{ usuario.email }}</td>
+                <td>{{ usuario.get_rol_display }}</td>
+                <td>{% if usuario.email_confirmado %}✔{% else %}✖{% endif %}</td>
+                <td>{{ usuario.biografia|default:"-" }}</td>
+                <td>{{ usuario.telefono|default:"-" }}</td>
+                <td>{{ usuario.fecha_registro|date:"d/m/Y" }}</td>
+                {% if perms.auth.change_user or perms.auth.delete_user %}
+                    <td>
+                        {% if perms.auth.change_user %}
+                            <a href="{% url 'editar_usuario' usuario.id %}" class="btn btn-primary btn-sm">Editar</a>
+                        {% endif %}
+                        {% if perms.auth.delete_user %}
+                            <a href="{% url 'eliminar_usuario' usuario.id %}" class="btn btn-danger btn-sm">Eliminar</a>
+                        {% endif %}
+                    </td>
+                {% endif %}
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="8" class="text-center">No hay resultados.</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <div class="text-center mt-3">
+        <a href="{% url 'lista_usuarios' %}" class="btn btn-secondary">Volver a la lista</a>
+    </div>
+</div>
+{% endblock %}

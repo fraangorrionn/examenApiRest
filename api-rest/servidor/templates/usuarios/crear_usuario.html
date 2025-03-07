@@ -1,0 +1,22 @@
+{% extends 'principal.html' %}
+
+{% block title %}Crear Usuario{% endblock %}
+
+{% block content %}
+{% if perms.auth.add_user %}
+    <div class="container mt-5">
+        <h1 class="text-center">Crear Usuario</h1>
+        <form method="post" class="border p-4 shadow-sm bg-light rounded">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="btn btn-primary">Crear Usuario</button>
+        </form>
+    </div>
+{% else %}
+    <div class="container mt-5 text-center">
+        <div class="alert alert-danger" role="alert">
+            <strong>Acceso Denegado:</strong> No tienes permisos para crear usuarios. Contacta al administrador.
+        </div>
+    </div>
+{% endif %}
+{% endblock %}

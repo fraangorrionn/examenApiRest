@@ -1,0 +1,77 @@
+/* Estilos Generales */
+html, body {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    text-align: center;
+    margin-bottom: 50px;  /* Debe ser igual o mayor que la altura del footer */
+}
+
+.content-wrapper {
+    min-height: calc(100vh - 50px); /* Ajuste para que el footer solo se vea al final */
+}
+
+
+/* Contenido centrado */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+    padding-bottom: 50px; /* Espacio suficiente para que el footer no cubra el contenido */
+}
+
+
+/* Botones */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+/* Estilos para Tablas */
+.styled-table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    font-size: 18px;
+    text-align: left;
+}
+
+.styled-table th, .styled-table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+}
+
+.styled-table th {
+    background-color: #004080;
+    color: white;
+    text-align: center;
+}
+
+.styled-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.styled-table tr:hover {
+    background-color: #ddd;
+}
+
+.styled-table td {
+    text-align: center;
+}

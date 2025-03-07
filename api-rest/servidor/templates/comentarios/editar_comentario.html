@@ -1,0 +1,41 @@
+{% extends 'principal.html' %}
+
+{% block title %}Editar Comentario{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2 class="text-center">Editar Comentario</h2>
+
+    {% if perms.servidor.change_comentario %}
+        <form method="post" class="border p-4 shadow-sm bg-light rounded">
+            {% csrf_token %}
+            {{ form.non_field_errors }}
+
+            <div class="mb-3">
+                <label class="form-label">Texto del Comentario</label>
+                {{ form.texto }}
+                {{ form.texto.errors }}
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Calificación</label>
+                {{ form.calificacion }}
+                {{ form.calificacion.errors }}
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Aplicación</label>
+                {{ form.app }}
+                {{ form.app.errors }}
+            </div>
+
+            <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+            <a href="{% url 'lista_comentarios' %}" class="btn btn-secondary">Cancelar</a>
+        </form>
+    {% else %}
+        <p class="alert alert-danger text-center">
+            No tienes permiso para editar comentarios.
+        </p>
+    {% endif %}
+</div>
+{% endblock %}

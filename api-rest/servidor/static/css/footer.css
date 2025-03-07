@@ -1,0 +1,10 @@
+/* Footer estático que solo se ve al final de la página */
+footer {
+    background-color: #004080;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+}

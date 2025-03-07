@@ -1,0 +1,101 @@
+{% extends 'principal.html' %}
+
+{% block title %}Buscar Comentarios{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2 class="text-center">Buscar Comentarios</h2>
+
+    <form method="GET" class="border p-3 bg-light rounded">
+        {{ form.non_field_errors }}
+        <div class="row g-3">
+            <div class="col-md-6">
+                <label class="form-label">Texto del Comentario</label>
+                {{ form.query }}
+                {{ form.query.errors }}
+            </div>
+            <div class="col-md-3">
+                <label class="form-label">Aplicación</label>
+                {{ form.app }}
+                {{ form.app.errors }}
+            </div>
+            <div class="col-md-3">
+                <label class="form-label">Usuario</label>
+                {{ form.usuario }}
+                {{ form.usuario.errors }}
+            </div>
+            <div class="col-md-3">
+                <label class="form-label">Fecha Desde</label>
+                {{ form.fecha_creacion_desde }}
+                {{ form.fecha_creacion_desde.errors }}
+            </div>
+            <div class="col-md-3">
+                <label class="form-label">Fecha Hasta</label>
+                {{ form.fecha_creacion_hasta }}
+                {{ form.fecha_creacion_hasta.errors }}
+            </div>
+            <div class="col-md-3">
+                <label class="form-label">Calificación Mínima</label>
+                {{ form.calificacion_minima }}
+                {{ form.calificacion_minima.errors }}
+            </div>
+            <div class="col-md-3">
+                <label class="form-label">Calificación Máxima</label>
+                {{ form.calificacion_maxima }}
+                {{ form.calificacion_maxima.errors }}
+            </div>
+            <div class="col-md-3">
+                <label class="form-label">Editado</label>
+                {{ form.editado }}
+                {{ form.editado.errors }}
+            </div>
+
+            <div class="col-md-12 text-center">
+                <button type="submit" class="btn btn-primary">Buscar</button>
+                <a href="{% url 'buscar_comentarios' %}" class="btn btn-secondary">Limpiar</a>
+            </div>
+        </div>
+    </form>
+
+    <h2 class="mt-4 text-center">Resultados</h2>
+    <p class="text-center"><strong>Se encontraron {{ comentarios|length }} comentarios.</strong></p>
+
+    <table class="table table-striped table-bordered mt-4">
+        <thead class="table-dark">
+            <tr>
+                <th>Texto</th>
+                <th>Aplicación</th>
+                <th>Usuario</th>
+                <th>Calificación</th>
+                <th>Fecha</th>
+                <th>Editado</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for comentario in comentarios %}
+            <tr>
+                <td>{{ comentario.texto }}</td>
+                <td>{{ comentario.app.nombre }}</td>
+                <td>{{ comentario.usuario.username }}</td>
+                <td>{{ comentario.calificacion }}/5</td>
+                <td>{{ comentario.fecha_creacion|date:"d/m/Y" }}</td>
+                <td>{% if comentario.editado %}✔{% else %}✖{% endif %}</td>
+                <td>
+                    {% if perms.servidor.change_comentario %}
+                        <a href="{% url 'editar_comentario' comentario.id %}" class="btn btn-primary btn-sm">Editar</a>
+                    {% endif %}
+                    {% if perms.servidor.delete_comentario %}
+                        <a href="{% url 'eliminar_comentario' comentario.id %}" class="btn btn-danger btn-sm" onclick="return confirm('¿Eliminar comentario?')">Eliminar</a>
+                    {% endif %}
+                </td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="7" class="text-center">No hay comentarios que coincidan con la búsqueda.</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

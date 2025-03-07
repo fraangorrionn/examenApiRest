@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}API REST{% endblock %}</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/estilos.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/cabecera.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/footer.css' %}">
+</head>
+<body>
+    <header>
+        <h1>API de Aplicaciones Móviles</h1>
+        <nav>
+            <div class="nav-container">
+                <div class="auth-container">
+                    {% if user.is_authenticated %}
+                        <span>Bienvenido, {{ user.username }}</span>
+                        <form id="logout-form" action="{% url 'logout' %}" method="POST" style="display: inline;">
+                            {% csrf_token %}
+                            <button type="submit" class="btn">Cerrar sesión</button>
+                        </form>                        
+                    {% else %}
+                        <a href="{% url 'login' %}" class="btn">Iniciar sesión</a>
+                        <a href="{% url 'registro' %}" class="btn">Registrarse</a>
+                    {% endif %}
+                </div>
+                <a href="{% url 'index' %}" class="btn">Inicio</a>
+                <a href="{% url 'lista_apps' %}" class="btn">Aplicaciones</a>
+                <a href="{% url 'lista_comentarios' %}" class="btn">Comentarios</a>
+                <a href="{% url 'lista_usuarios' %}" class="btn">Usuarios</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="content-container">
+            {% block content %}{% endblock %}
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 API REST</p>
+    </footer>
+</body>
+</html>
+

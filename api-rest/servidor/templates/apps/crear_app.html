@@ -1,0 +1,21 @@
+{% extends 'principal.html' %}
+
+{% block title %}Crear Aplicación{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2 class="text-center">Crear Aplicación</h2>
+
+    {% if perms.servidor.add_mobileapp %}
+        <form method="post" class="border p-4 shadow-sm bg-light rounded">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="btn btn-success">Guardar</button>
+        </form>
+    {% else %}
+        <div class="alert alert-danger text-center" role="alert">
+            No tienes permisos para crear aplicaciones.
+        </div>
+    {% endif %}
+</div>
+{% endblock %}
